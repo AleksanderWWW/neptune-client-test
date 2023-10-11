@@ -13,6 +13,7 @@ def my_custom_callback(run):
 def main():
     os.environ['NEPTUNE_ENABLE_DEFAULT_ASYNC_LAG_CALLBACK'] = 'TRUE'
     os.environ['NEPTUNE_ENABLE_DEFAULT_ASYNC_NO_PROGRESS_CALLBACK'] = 'TRUE'
+    os.environ['NEPTUNE_SAFETY_MODE'] = 'TRUE'
 
     with Run(
         async_lag_callback=my_custom_callback,
